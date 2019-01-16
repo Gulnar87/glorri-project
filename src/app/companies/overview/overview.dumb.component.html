@@ -1,0 +1,34 @@
+<div class="row panel-row">
+    <div class=" col-lg-8 col-12 ">
+        <div class="card p-5" *ngFor="let company of companies">
+            <div class="row">
+                <div class="col-12 mb-2" >
+                    <select (change)="onChange(company.id)"> 
+                        <option value="0"> All Categories </option>
+                        <option *ngFor="let company of companies" value=" {{company.name}}">  {{ company.name }} </option>
+                    </select>
+                </div>
+                <div class="col-12 mb-2">
+                    <fusioncharts
+                      type="spline"
+                      width="600"
+                      height="400"
+                      [dataSource]="dataSource">
+                    </fusioncharts>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="d-flex flex-row bd-highlight mb-3 justify-content-between ">
+                        <div class=" p-2 bd-highlight"> Month: {{ company.monthRevenue }} </div>
+                        <div class=" p-2 bd-highlight d-flex justify-content-start">
+                            <button class="btn btn-outline-primary btn-sm"> open </button>
+                        </div>
+                        <div class="p-2 d-flex justify-content-end bd-highlight"> Total: {{ company.revenue }} </div>
+                    </div> 
+                </div>
+            </div>  
+        </div> 
+   </div> 
+</div>
+
+
+
