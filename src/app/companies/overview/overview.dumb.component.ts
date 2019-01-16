@@ -18,14 +18,6 @@ export class OverviewDumbComponent implements OnInit {
   }
   
 
-  // onChange(filterVal: any) {
-  //       if (filterVal == "0")
-  //           this.companies = this.selectedCompany;
-  //       else
-  //       this.companies= this.selectedCompany.filter((item) => item.id == filterVal);
-  //   }
-
-
 ngOnInit(){
 
 }
