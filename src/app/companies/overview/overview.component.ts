@@ -18,10 +18,8 @@ companies: Company[];
 		this.companyService.get()
             .subscribe(
                 (response: Root) => {
-
-                    this.companies = response.companies;
-                    // this.companies.sort((a: Company, b: Company) => b.monthRevenue - a.monthRevenue);
-
+                 this.companies = response.companies;
+                    this.companies.sort((a: Company, b: Company) => b.monthRevenue - a.monthRevenue);
                 },
                 (error: HttpErrorResponse) => console.log(error)
             );

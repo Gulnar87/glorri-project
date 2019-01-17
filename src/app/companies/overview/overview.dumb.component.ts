@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Company } from '../company.model';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
     selector: 'app-overview-dumb',
@@ -10,20 +11,29 @@ export class OverviewDumbComponent implements OnInit {
 
   @Input() companies: Company[];
 
-  selectedCompany: Company[]; 
- 
 
-  onChange(selectedId){
-    this.selectedCompany = this.companies.filter(company => company.id === selectedId)
+  selectedCompany: Company[]; 
+
+
+
+ 
+  onChange(selectedId: any){
+   this.selectedCompany = this.companies.filter((company) => company.id == selectedId);
+
+
+    console.log(selectedId);
+    console.log(this.selectedCompany) 
+
   }
   
-
-ngOnInit(){
+ ngOnInit(){
 
 }
 
  dataSource: any;
-	constructor() {
+	constructor(private route: ActivatedRoute,
+              private router: Router)  {
+
     this.dataSource = {
       "chart": {
         "caption": "",
@@ -91,6 +101,12 @@ ngOnInit(){
 
 
 
+  }
+
+
+   onOpen() {
+  
+    this.router.navigate(['/']);
   }
 
 
