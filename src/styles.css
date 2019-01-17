@@ -7,7 +7,8 @@ h1 {
   margin-top: 1%;
   margin-bottom: 1%;
   padding: 10px;
-   box-shadow: 0px 5px 20px #555;
+  box-shadow: 0px 5px 20px #555;
+/*  background-color: #eff4f4;*/
 
 }
 
@@ -16,3 +17,11 @@ h1 {
   margin-right: 15px;
 
 }
+
+.card-header {
+  font-family: 'Luminari';
+  border:0;
+  background-color: #11adad;
+}
+
+

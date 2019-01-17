@@ -19,10 +19,8 @@ export class CompanyListComponent implements OnInit {
         this.companyService.get()
             .subscribe(
                 (response: Root) => {
-
                     this.companies = response.companies;
                     this.companies.sort((a: Company, b: Company) => b.monthRevenue - a.monthRevenue);
-
                 },
                 (error: HttpErrorResponse) => console.log(error)
             );

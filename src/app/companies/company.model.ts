@@ -20,3 +20,4 @@ export interface RevenuePerWeek {
     saturday: number;
     sunday: number;
 }
+

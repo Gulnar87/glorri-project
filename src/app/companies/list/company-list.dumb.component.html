@@ -1,19 +1,21 @@
 <div class="row panel-row">
     <div class="col-md-6 offset-sm-3" *ngFor="let company of companies">
-        <div class="card px-3">
-            <h5 class="card-title">Company Id: {{ company.id }}</h5>
-            <h5 class="card-title">Company Name: {{ company.name }}</h5>
-            <p class="card-text">Company Category: {{ company.type }}</p>
+        <div class="card p-0" style="background-color: #eff4f4">
+            <div class="card-header">
+                <h4 class="card-title" >Company Id: {{ company.id }}</h4>
+                <h4 class="card-title">Company Name: {{ company.name }}</h4>
+            </div>   
+            <div class="card-body"> <p class="card-text">Company Category: {{ company.type }}</p>
             <h5 class="card-title">Week Statistics: </h5>
             <p class="card-text">Monday: {{ company.revenuePerWeek?.monday | currency: 'EUR'}}</p>
             <p class="card-text">Tuesday: {{ company.revenuePerWeek?.tuesday | currency: 'EUR' }}</p>
             <p class="card-text">Wednesday: {{ company.revenuePerWeek?.wednesday | currency: 'EUR' }}</p>
             <p class="card-text">Thursday: {{ company.revenuePerWeek?.thursday | currency: 'EUR' }}</p>
-            <p class="card-text">Friday: {{ company.revenuePerWeek?.friday }}</p>
+            <p class="card-text">Friday: {{ company.revenuePerWeek?.friday | currency: 'EUR' }}</p>
             <p class="card-text">Saturday: {{ company.revenuePerWeek?.saturday | currency: 'EUR' }}</p>
             <p class="card-text">Sunday: {{ company.revenuePerWeek?.sunday  | currency: 'EUR' }}</p>
             <p class="card-text"> Balance: {{ company.revenue  | currency: 'EUR' }}</p>
-            <p class="card-text"> Month Balance: {{ company.monthRevenue | currency: 'EUR'}} </p>
+            <p class="card-text"> Month Balance: {{ company.monthRevenue | currency: 'EUR'}} </p></div>     
         </div> <!-- card  -->
     </div> <!-- column first -->
 </div> <!-- row -->

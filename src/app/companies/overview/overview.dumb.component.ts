@@ -1,38 +1,31 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Company } from '../company.model';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'app-overview-dumb',
     templateUrl: './overview.dumb.component.html'
 })
 
+
 export class OverviewDumbComponent implements OnInit {
 
   @Input() companies: Company[];
 
+  selectedCompany: Company; 
 
-  selectedCompany: Company[]; 
-
-
+  dataSource: any;
 
  
   onChange(selectedId: any){
-   this.selectedCompany = this.companies.filter((company) => company.id == selectedId);
-
-
-    console.log(selectedId);
-    console.log(this.selectedCompany) 
+     
+   this.selectedCompany = this.companies.find((company) => company.id == selectedId);
 
   }
-  
- ngOnInit(){
 
-}
 
- dataSource: any;
-	constructor(private route: ActivatedRoute,
-              private router: Router)  {
+	constructor(private router: Router)  {
 
     this.dataSource = {
       "chart": {
@@ -70,44 +63,45 @@ export class OverviewDumbComponent implements OnInit {
       },
       "data": [{
         "label": "Mon",
-        "value": "15123"
+        "value": "12"
       },
       {
         "label": "Tue",
-        "value": "14233"
+        "value": "5"
       },
       {
         "label": "Wed",
-        "value": "25507"
+        "value": "34"
       },
       {
         "label": "Thu",
-        "value": "9110"
+        "value": "15"
       },
       {
         "label": "Fri",
-        "value": "15529"
+        "value": "10"
       },
       {
         "label": "Sat",
-        "value": "20803"
+        "value": "21"
       },
       {
         "label": "Sun",
-        "value": "19202"
+        "value": "20"
       }
       ]
     }
 
 
-
   }
 
-
-   onOpen() {
-  
+ onOpen() {
     this.router.navigate(['/']);
   }
 
+
+ ngOnInit(){
+
+}
 
 }

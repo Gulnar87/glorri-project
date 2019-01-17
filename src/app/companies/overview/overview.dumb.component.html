@@ -13,16 +13,16 @@
                       type="spline"
                       width="600"
                       height="400"
-                      [dataSource]="dataSource">
+                      [dataSource]="dataSource"> 
                     </fusioncharts>
                 </div>
                 <div class="col-12 mb-2" >
                     <div class="d-flex flex-row bd-highlight mb-3 justify-content-between ">
-                        <div class=" p-2 bd-highlight" > Month: {{ selectedCompany }}  </div>
+                        <div class=" p-2 bd-highlight" *ngIf="selectedCompany"  > Month: {{ selectedCompany.monthRevenue }}  </div>
                         <div class=" p-2 bd-highlight d-flex justify-content-start">
                           <a  class="btn btn-outline-primary btn-sm" (click)="onOpen()" > Open </a>
                         </div>
-                        <div class="p-2 d-flex justify-content-end bd-highlight"> Total: {{ selectedCompany }}  </div>
+                        <div class="p-2 d-flex justify-content-end bd-highlight" *ngIf="selectedCompany" > Total: {{ selectedCompany.revenue}}  </div>
                     </div> 
                 </div>
             </div>  
