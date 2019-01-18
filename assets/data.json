@@ -1,4 +1,5 @@
-      [{
+    {  "companyOne" :[
+      {
         "label": "Mon",
         "value": "12"
       },
@@ -26,9 +27,141 @@
         "label": "Sun",
         "value": "20"
       }
+
+      ],
+
+   "companyTwo":  [
+      {
+        "label": "Mon",
+        "value": "14"
+      },
+      {
+        "label": "Tue",
+        "value": "25"
+      },
+      {
+        "label": "Wed",
+        "value": "44"
+      },
+      {
+        "label": "Thu",
+        "value": "5"
+      },
+      {
+        "label": "Fri",
+        "value": "14"
+      },
+      {
+        "label": "Sat",
+        "value": "51"
+      },
+      {
+        "label": "Sun",
+        "value": "22"
+      }
+
+      ],
+       "companyThree":  [
+      {
+        "label": "Mon",
+        "value": "10"
+      },
+      {
+        "label": "Tue",
+        "value": "34"
+      },
+      {
+        "label": "Wed",
+        "value": "24"
+      },
+      {
+        "label": "Thu",
+        "value": "11"
+      },
+      {
+        "label": "Fri",
+        "value": "17"
+      },
+      {
+        "label": "Sat",
+        "value": "41"
+      },
+      {
+        "label": "Sun",
+        "value": "23"
+      }
+
+      ],
+
+        "companyFour":  [
+      {
+        "label": "Mon",
+        "value": "15"
+      },
+      {
+        "label": "Tue",
+        "value": "4"
+      },
+      {
+        "label": "Wed",
+        "value": "4"
+      },
+      {
+        "label": "Thu",
+        "value": "13"
+      },
+      {
+        "label": "Fri",
+        "value": "16"
+      },
+      {
+        "label": "Sat",
+        "value": "14"
+      },
+      {
+        "label": "Sun",
+        "value": "26"
+      }
+
+      ],
+
+       "companyFive":  [
+      {
+        "label": "Mon",
+        "value": "15"
+      },
+      {
+        "label": "Tue",
+        "value": "36"
+      },
+      {
+        "label": "Wed",
+        "value": "34"
+      },
+      {
+        "label": "Thu",
+        "value": "15"
+      },
+      {
+        "label": "Fri",
+        "value": "14"
+      },
+      {
+        "label": "Sat",
+        "value": "21"
+      },
+      {
+        "label": "Sun",
+        "value": "25"
+      }
+
       ]
 
 
 
 
+
+  }
+
+      
 
