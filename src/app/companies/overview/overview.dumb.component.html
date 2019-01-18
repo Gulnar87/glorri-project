@@ -9,12 +9,9 @@
                     </select>
                 </div>
                 <div class="col-12 mb-2">
-                    <fusioncharts 
-                      type="spline"
-                      width="600"
-                      height="400"
-                      [dataSource]="dataSource"> 
-                    </fusioncharts>
+                  <div *ngIf="chart">
+                    <canvas id="canvas"> {{ chart }} </canvas>
+                  </div>
                 </div>
                 <div class="col-12 mb-2" >
                     <div class="d-flex flex-row bd-highlight mb-3 justify-content-between ">

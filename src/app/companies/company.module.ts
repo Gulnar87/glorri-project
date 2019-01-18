@@ -12,6 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import { ChartService } from './chart.service';
+
 
 FusionChartsModule.fcRoot(
   FusionCharts,
@@ -35,6 +37,6 @@ FusionChartsModule.fcRoot(
         FusionChartsModule,
         NgbModule
     ],
-    providers: [CompanyService],
+    providers: [CompanyService, ChartService],
 })
 export class CompanyModule { }
