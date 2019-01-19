@@ -8,7 +8,6 @@ import { CompanyListDumbComponent } from './list/company-list.dumb.component';
 import { OverviewComponent } from './overview/overview.component';
 import { OverviewDumbComponent } from './overview/overview.dumb.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChartService } from './chart.service';
 
 @NgModule({
     declarations: [
@@ -24,6 +23,6 @@ import { ChartService } from './chart.service';
         HttpClientModule,
         NgbModule
     ],
-    providers: [CompanyService, ChartService],
+    providers: [CompanyService],
 })
 export class CompanyModule { }
